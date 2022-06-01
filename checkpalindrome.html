@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>  
+        h1 {  
+        text-align: center;  
+        padding: 30px;  
+        background-color: rgb(230, 58, 46);  
+        color: white;  
+        }  
+          
+        .palin {  
+        
+        margin-left: auto;  
+        margin-right: auto;
+        text-align: center;
+        width: 80%;  
+        border: 3px solid gray;  
+        border-radius: 5px;  
+        padding: 30px;
+        background-color: azure;  
+        }  
+          
+      
+        #pa2 {  
+          
+        width: 50%;  
+        border: 3px solid gray;  
+        border-radius: 5px;  
+        padding: 10px;  
+        }  
+          
+        </style>  
+</head>
+
+<body>
+    <h1> Palindrome Program in JavaScript </h1>  
+        <div class="palin">  
+        <label> Enter any string : </label>   
+        <input type "text" id= "pa"> <br> <br>  
+        <label> Resultant string : </label>   
+         <input type = "text" id = "pa2" > </b> <br>   <br>
+        <input type= "submit" onclick = "checkpalindrome()" > <br>   
+          
+        </div>  
+          
+
+    <script>
+
+        function checkpalindrome() {
+            var str = document.getElementById("pa").value;
+
+            for (i = 0; i < str.length/2; i++) {
+                if (str[i] !== str[str.length - 1-i]) {
+                    document.getElementById("pa2"). value = str + " is a not Palindrome String ";
+                    return 
+                } 
+                
+                else {
+                     document.getElementById("pa2"). value = str + " is a Palindrome String ";
+                    }
+               
+            }
+
+        }
+                
+            
+    </script>
+</body>
+
+</html>

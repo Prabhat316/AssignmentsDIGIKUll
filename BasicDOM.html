@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root" onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse over this text</div>
+
+    <div class="blue-white" onmouseover="mouseoverclass()" onmouseout="mouseoutclass()">this is another text
+    </div>
+    <h2 class="blue-white" onmouseover="mouseoverclass()" onmouseout="mouseoutclass()" >Hover over this</h2>
+    <p onmouseover="mouseoverpara()" onmouseout="mouseoutpara()">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, repellat.
+    </p>
+    
+    
+   <script>
+
+
+function mouseOver() {
+ document.getElementById("root").style.color = "red";
+}
+function mouseOut() {
+ document.getElementById("root").style.color = "black";
+}
+
+function mouseoverclass() {
+ document.getElementsByClassName("blue-white")[0].style.color = "white";
+   document.getElementsByClassName("blue-white")[1].style.color = "white";
+   document.getElementsByClassName("blue-white")[0].style.backgroundColor = "blue";
+ document.getElementsByClassName("blue-white")[1].style.backgroundColor = "blue";
+}
+
+function mouseoutclass() {
+ document.getElementsByClassName("blue-white")[0].style.color = "black";
+ document.getElementsByClassName("blue-white")[1].style.color = "black";
+ document.getElementsByClassName("blue-white")[0].style.backgroundColor = "#FFFFFF"
+ document.getElementsByClassName("blue-white")[1].style.backgroundColor = "#FFFFFF";
+}
+
+function mouseoverpara() {
+ document.getElementsByTagName("p")[0].style.fontSize = "50px";
+}
+function mouseoutpara() {
+   document.getElementsByTagName("p")[0].style.fontSize = "15px";
+}
+
+</script>
+   
+</body>
+</html>
